@@ -5,4 +5,13 @@ class FavoritesController < ApplicationController
       render :show
     end
   end
+
+  def destroy
+if current_user
+@favorite = Favorite.find_by(id: params[:id])
+@favorite.destroy
+render json: {message: "favorite deleted"}
+end
+  end
+  
 end

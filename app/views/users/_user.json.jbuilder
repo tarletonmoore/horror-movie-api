@@ -2,3 +2,4 @@
 # json.url user_url(user, format: :json)
 json.name user.name
 json.image_url user.image_url
+json.movies user.movies

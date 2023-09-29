@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
+  get "/me" => "users#show"
 
   get "/movies" => "movies#index"
 

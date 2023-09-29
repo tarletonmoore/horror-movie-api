@@ -3,3 +3,7 @@
 json.name user.name
 json.image_url user.image_url
 json.movies user.movies
+# json.favorites user.favorites
+json.favorites user.favorites.each do |fav|
+  json.fav fav.movie
+end

@@ -13,4 +13,11 @@ class FavoritesController < ApplicationController
       render json: { message: "favorite deleted" }
     end
   end
+
+  def index
+    if current_user
+      @favorites = current_user.favorites
+      render :index
+    end
+  end
 end

@@ -9,9 +9,11 @@ Rails.application.routes.draw do
 
   get "/movies" => "movies#index"
   get "/movies/:id" => "movies#show"
+  # get "/movies/:subgenre" => "movies#subgenre"
 
   post "/favorites" => "favorites#create"
   delete "/favorites/:id" => "favorites#destroy"
+  get "/favorites" => "favorites#index"
 
   post "/reviews" => "reviews#create"
 end

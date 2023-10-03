@@ -20,3 +20,11 @@
 # fav = Favorite.create!(user_id: 1, movie_id: 1)
 # fav = Favorite.create!(user_id: 1, movie_id: 3)
 # fav = Favorite.create!(user_id: 2, movie_id: 1)
+
+# movie = Movie.create!(title: "A Quiet Place", image_url: "https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png", description: "A family struggles for survival in a world where most humans have been killed by blind but noise-sensitive creatures. They are forced to communicate in sign language to keep the creatures at bay.", subgenre: "creature feature")
+
+# movie = Movie.create!(title: "The Descent", image_url: "https://m.media-amazon.com/images/M/MV5BMjA5NzQ1NTgwNV5BMl5BanBnXkFtZTcwNjUxMzUzMw@@._V1_FMjpg_UX1000_.jpg", description: "A caving expedition goes horribly wrong, as the explorers become trapped and ultimately pursued by a strange breed of predators.", subgenre: "creature feature")
+
+# movie = Movie.create!(title: "Trick 'r Treat", image_url: "https://m.media-amazon.com/images/I/51QUejxfV8L._AC_UF894,1000_QL80_.jpg", description: "Five interwoven stories that occur on Halloween: an everyday high school principal has a secret life as a serial killer; a college virgin might have just met the guy for her; a group of teenagers pull a mean prank; a woman who loathes the night has to contend with her holiday-obsessed husband; and a mean old man meets his match with a demonic, supernatural trick-or-treater.", subgenre: "anthology")
+
+# movie = Movie.create!(title: "Evil Dead 2", image_url: "https://m.media-amazon.com/images/I/71JMoIKsO0L._AC_UF894,1000_QL80_.jpg", description: "The lone survivor of an onslaught of flesh-possessing spirits holes up in a cabin with a group of strangers while the demons continue their attack.", subgenre: "paranormal")

@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
   get "/me" => "users#show"
 
-  get "/movies/most_liked", to: "movies#most_liked"
+  get "/movies/most_liked" => "movies#most_liked"
+  get "/movies/recommendations" => "movies#recommendations"
+
   get "/movies" => "movies#index"
   get "/movies/:id" => "movies#show"
 

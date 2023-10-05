@@ -26,4 +26,28 @@ class MoviesController < ApplicationController
       render json: @most_liked_movies
     end
   end
+
+  def recommendations
+    if current_user
+      user_favorites = current_user.favorites.pluck(:movie_id)
+
+      similar_users = Favorite.where(movie_id: user_favorites)
+                             .where.not(user_id: current_user.id)
+                             .pluck(:user_id)
+                             .uniq
+
+     
+      recommended_movies = Movie.joins(:favorites)
+                                .where(favorites: { user_id: similar_users })
+                                .where.not(id: user_favorites)
+                                .group("movies.id")
+                                .order("COUNT(favorites.movie_id) DESC")
+                                .limit(5)
+
+      render json: recommended_movies
+    else
+      render json: { error: "Unauthorized" }, status: :unauthorized
+    end
+  end
+
 end

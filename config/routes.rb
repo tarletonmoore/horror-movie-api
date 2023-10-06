@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get "/movies/most_liked" => "movies#most_liked"
   get "/movies/recommendations" => "movies#recommendations"
-
+get "/movies/recently_added" => "movies#recently_added"
   get "/movies" => "movies#index"
   get "/movies/:id" => "movies#show"
 

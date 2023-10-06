@@ -50,4 +50,9 @@ class MoviesController < ApplicationController
     end
   end
 
+  def recently_added
+    @recently_added_movies = Movie.order(created_at: :desc).limit(10) 
+    render json: @recently_added_movies
+  end
+
 end

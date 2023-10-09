@@ -9,7 +9,4 @@ class ReviewsController < ApplicationController
       render :show
     end
   end
-
-
-
 end

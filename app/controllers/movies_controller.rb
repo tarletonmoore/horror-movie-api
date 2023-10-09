@@ -32,11 +32,10 @@ class MoviesController < ApplicationController
       user_favorites = current_user.favorites.pluck(:movie_id)
 
       similar_users = Favorite.where(movie_id: user_favorites)
-                             .where.not(user_id: current_user.id)
-                             .pluck(:user_id)
-                             .uniq
+        .where.not(user_id: current_user.id)
+        .pluck(:user_id)
+        .uniq
 
-     
       recommended_movies = Movie.joins(:favorites)
                                 .where(favorites: { user_id: similar_users })
                                 .where.not(id: user_favorites)
@@ -51,8 +50,7 @@ class MoviesController < ApplicationController
   end
 
   def recently_added
-    @recently_added_movies = Movie.order(created_at: :desc).limit(10) 
+    @recently_added_movies = Movie.order(created_at: :desc).limit(10)
     render json: @recently_added_movies
   end
-
 end

@@ -1,4 +1,9 @@
 class RatingsController < ApplicationController
+  def index
+    @ratings = Rating.all
+    render :index
+  end
+
   def create
     if current_user
       @rating = Rating.create(

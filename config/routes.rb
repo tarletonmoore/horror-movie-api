@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   patch "/reviews/:id" => "reviews#update"
   delete "/reviews/:id" => "reviews#destroy"
 
+  get "/ratings" => "ratings#index"
   post "/ratings" => "ratings#create"
 end
